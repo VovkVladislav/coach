@@ -30,7 +30,11 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 8rem;
+}
+
+input{
+  margin-bottom: -2px;
 }
 
 .form-signin .form-control {
@@ -48,16 +52,15 @@ body {
   color: rgb(240, 119, 119);
 }
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 .btn{
+  margin-top: 10px;
   text-transform: uppercase;
   background-color: transparent;
   display: inline-block;

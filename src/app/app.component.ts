@@ -10,4 +10,4 @@ export class AppComponent {
   title = 'project';
 }
 
-export var authInd:boolean = true;
+export var authInd:boolean = false;

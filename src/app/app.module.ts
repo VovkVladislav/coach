@@ -12,12 +12,14 @@ import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FeaturesComponent } from './features/features.component';
 import { SignInComponent } from './page/sign-in/sign-in.component';
+import { SignUpComponent } from './page/sign-up/sign-up.component';
 
 const appRoutes: Routes = [
   {path: '', component: InfoPageComponent},
   {path: 'account', component: AccountPageComponent},
   {path: 'trainings', component: TrainingsPageComponent},
-  {path: 'signin', component: SignInComponent}
+  {path: 'signin', component: SignInComponent},
+  {path: 'signup', component: SignUpComponent}
 ]
 
 @NgModule({
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
     CarouselComponent,
     FeaturesComponent,
     SignInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
