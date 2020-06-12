@@ -1,16 +1,16 @@
-
-
-
 <form class="form-signin">
  
     <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Confirm email" required>   
-    <input class="form-control" placeholder="Name" required>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Confirm password" required>
+    <input type="email" [(ngModel)] = "user.email" [ngModelOptions]="{standalone: true}" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+    <input class="form-control" [(ngModel)] = "user.username" [ngModelOptions]="{standalone: true}" placeholder="Username" required>
+    <input type="password" [(ngModel)] = "user.password" [ngModelOptions]="{standalone: true}" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="password" [(ngModel)] = "confPassword" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Confirm password" required>
     
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="sendUser(user, confPassword)">Sign up</button>
+    
+    <div *ngIf="isPasswordMismatch" class="alert alert-danger mt-2" role="alert">
+      Password don't match
+    </div>
 
     <p>Already have an account? <a routerLink="/signin" class="reg-url">Log in!</a></p>
   </form>
